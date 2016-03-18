@@ -19,7 +19,7 @@ class articlePrint extends Plugin {
 	function hook_article_button($line) {
 		$article_id = $line["id"];
 
-		$rv = "<img src=\"plugins/articleprint/printer.png\"
+		$rv = "<img src=\"".basename(dirname(dirname(__FILE__)))."/articleprint/printer.png\"
 			class='tagsPic' style=\"cursor : pointer\"
 			onclick=\"printInNewWindow($article_id)\"
 			title='".__('Print article')."'>";
